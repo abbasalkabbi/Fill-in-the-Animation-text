@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author"  content="abbas">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fill text</title>
+</head>
+<style>
+    *{box-sizing:border-box;
+padding:0;margin:0;}
+body{
+  font-family:Arial,Tahoma;
+}
+.h{
+  margin:50px auto;
+  text-align:center;
+  font-weight:bold;
+  width:fit-content;
+  font-size: 80px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px #333;
+  position: relative;
+}
+.h::before{
+    content:attr(data-text);
+    position:absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: #0a35f78c;
+    transition: 0.5s;
+     width: 0;
+    overflow: hidden;
+  
+}
+.h:hover:before{
+    width:100% ;
+    
+}
+
+
+</style>
+<body>
+    <h2 class="h" data-text="Abbas">Abbas</h2>
+</body>
+</html>
